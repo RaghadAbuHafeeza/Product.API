@@ -1,0 +1,15 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Product.Core.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Product.Core.IRepositories
+{
+    public interface IOrderRepository
+    {
+        Task<IEnumerable<Orders>> GetAllOrdersByUserIdAsync(int userId);
+    }
+}
